@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class adminController extends Controller
 {
     public function admin(){
-        return view('pages.Admin');
+        $admindata=Admin::paginate(2);
+        return view('pages.Admin',compact('admindata'));
     }
 
     public function adminForm(){
@@ -16,11 +17,20 @@ class adminController extends Controller
     }
 
     public function store(Request $request){
-        //dd($request);
         Admin::create([
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
             'email'=>$request->email,
             'password'=>$request->password,
+            'present_address'=>$request->present_address,
+            'permanent_address'=>$request->permanent_address,
+            'city'=>$request->city,
+            'state'=>$request->state,
+            'zip_form'=>$request->zip_form,
         ]);
+
+        return redirect()->back();
+        
     }
 
 

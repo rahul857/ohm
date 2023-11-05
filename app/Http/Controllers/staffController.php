@@ -8,7 +8,8 @@ use App\Models\Staff;
 class staffController extends Controller
 {
     public function staff(){
-        return view('pages.Staff');
+        $staffdata=Staff::all();
+        return view('pages.Staff',compact('staffdata'));
     }
 
     public function staffForm(){

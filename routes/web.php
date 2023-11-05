@@ -34,7 +34,6 @@ Route::post('/staff/store',[staffController::class,'store'])->name('Staff_Data_S
 
 
 Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
-
+Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
-Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
