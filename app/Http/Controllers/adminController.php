@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class adminController extends Controller
 {
@@ -17,11 +18,25 @@ class adminController extends Controller
     }
 
     public function store(Request $request){
+        $validate = Validator::make($request->all(),[
+
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'email'=>'required',
+            'mobile_no'=>'required',
+
+
+        ]);
+        if ($validate->fails()){
+            return redirect()->back();
+        
+        }
+        
         Admin::create([
             'first_name'=>$request->first_name,
             'last_name'=>$request->last_name,
             'email'=>$request->email,
-            'password'=>$request->password,
+            'mobile_no'=>$request->mobile_no,
             'present_address'=>$request->present_address,
             'permanent_address'=>$request->permanent_address,
             'city'=>$request->city,
@@ -29,7 +44,7 @@ class adminController extends Controller
             'zip_form'=>$request->zip_form,
         ]);
 
-        return redirect()->back();
+        return redirect()->route('admin');
         
     }
 

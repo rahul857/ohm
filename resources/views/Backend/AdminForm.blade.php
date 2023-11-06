@@ -14,20 +14,32 @@
   <form>
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" name="first_name" placeholder="First name">
+      <input required type="text" class="form-control" name="first_name" placeholder="First name">
+      @error('first_name')
+      <div class="alert alert-danger">{{$message}}</div>
+      @enderror
     </div>
     <div class="col">
-      <input type="text" class="form-control" name="last_name" placeholder="Last name">
+      <input required type="text" class="form-control" name="last_name" placeholder="Last name">
+      @error('last_name')
+      <div class="alert alert-danger">{{$message}}</div>
+      @enderror
     </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" name="email">
+    <input required type="email" class="form-control" name="email">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    @error('email')
+      <div class="alert alert-danger">{{$message}}</div>
+      @enderror
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control">
+    <label for="exampleInputmobile_no1" class="form-label">Mobile No.</label>
+    <input required type="mobile_no" name="mobile_no" class="form-control">
+    @error('mobile_no')
+      <div class="alert alert-danger">{{$message}}</div>
+      @enderror
   </div>
   <div class="form-group">
     <label for="inputAddress">Present Address</label>
@@ -55,7 +67,7 @@
     </div>
   </div>
   <!-- <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input required type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div> -->
   <input type="submit">

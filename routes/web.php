@@ -1,11 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
-use App\Http\Controllers\staffController;
 use App\Http\Controllers\dashboardController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,6 @@ Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboa
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
+
+
+Route::get('/pages/login',[UserController::class,'loginForm'])->name('admin.login');

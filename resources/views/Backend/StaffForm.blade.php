@@ -4,7 +4,7 @@
 
 @section('container')
 
-<h3>Staff Form:</h3>
+<h3>Staff Information:</h3>
 
 <hr/>
 
@@ -29,7 +29,9 @@
 </div>
 
 
+
     
+<h3>Doctor Information:</h3>
 
 
 

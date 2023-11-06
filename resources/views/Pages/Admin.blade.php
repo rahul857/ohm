@@ -15,12 +15,13 @@
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
+      <th scope="col">Mobile No.</th>
       <th scope="col">Present Address</th>
       <th scope="col">Permanent Address</th>
       <th scope="col">City</th>
       <th scope="col">State</th>
       <th scope="col">Zip</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -30,12 +31,17 @@
       <td>{{$item->first_name}}</td>
       <td>{{$item->last_name}}</td>
       <td>{{$item->email}}</td>
-      <td>{{$item->password}}</td>
+      <td>{{$item->mobile_no}}</td>
       <td>{{$item->present_address}}</td>
       <td>{{$item->permanent_address}}</td>
       <td>{{$item->city}}</td>
       <td>{{$item->state}}</td>
       <td>{{$item->zip_form}}</td>
+      <td>
+        <a href="#" class="btn btn-primary">Edit</a>
+        <a href="#"class="btn btn-success">Add</a>
+        <a href="#"class="btn btn-danger">Delete</a>
+      </td>
     </tr>
     @endforeach
   </tbody>
