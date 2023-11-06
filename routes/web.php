@@ -7,6 +7,7 @@ use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\donationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use App\Http\Controllers\dashboardController;
 
 Route::get('/',[MasterController::class,'master']);
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
+Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
 
 
 Route::get('/admin',[adminController::class,'admin'])->name('admin');
@@ -37,7 +39,8 @@ Route::post('/staff/store',[staffController::class,'store'])->name('Staff_Data_S
 Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
-Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
-
+Route::get('/donation',[donationController::class,'donation'])->name('donation');
+Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
 
 Route::get('/pages/login',[UserController::class,'loginForm'])->name('admin.login');
+

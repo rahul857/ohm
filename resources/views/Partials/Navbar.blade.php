@@ -5,9 +5,7 @@
           <ul class="nav bg-primary">
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
-                
-                Hello
-                
+                 
               </a>
             </li>
             <li class="nav-item">
@@ -18,7 +16,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link"  href="{{route('Old.Age')}}">
-                <span class="menu-title">Old Age</span>
+                <span class="menu-title">Old Person</span>
             
               </a>
               <div class="collapse" id="ui-basic">
@@ -52,10 +50,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+              <a class="nav-link" href="{{route('donation')}}">
                 <span class="menu-title">Donation</span>
-                
               </a>
+            </li>
+            
               <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                 <span class="menu-title">Invoic</span>
                 
