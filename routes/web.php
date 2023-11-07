@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
-use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\donationController;
+use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\Backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/',[MasterController::class,'master']);
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
 
+Route::get('/', [HomeController::class, 'home'])->name('dashboard');
 
 Route::get('/admin',[adminController::class,'admin'])->name('admin');
 Route::get('/adminForm',[admincontroller::class,'adminForm'])->name('adminForm');
@@ -40,7 +42,9 @@ Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboa
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
 Route::get('/donation',[donationController::class,'donation'])->name('donation');
-Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
+Route::get('/donationForm',[donationCxontroller::class,'donationForm'])->name('donationForm');
 
-Route::get('/pages/login',[UserController::class,'loginForm'])->name('admin.login');
+Route::get('/pages/login',[UserController::class,'loginForm'])->name('pages.login');
+
+Route::post('/login-form-post',[UserController::class,'loginPost'])->name('pages.login.post');
 
