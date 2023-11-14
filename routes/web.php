@@ -21,8 +21,13 @@ use App\Http\Controllers\Backend\UserController;
 |
 */
 
+Route::get('/pages/login',[UserController::class,'loginForm'])->name('pages.login');
 
-Route::get('/',[MasterController::class,'master']);
+Route::post('/login-form-post',[UserController::class,'loginPost'])->name('pages.login.post');
+
+Route::group(['middleware'=>'auth'],function(){
+
+Route::get('/',[MasterController::class,'master'])->name('master');
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
 
@@ -44,7 +49,5 @@ Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name(
 Route::get('/donation',[donationController::class,'donation'])->name('donation');
 Route::get('/donationForm',[donationCxontroller::class,'donationForm'])->name('donationForm');
 
-Route::get('/pages/login',[UserController::class,'loginForm'])->name('pages.login');
-
-Route::post('/login-form-post',[UserController::class,'loginPost'])->name('pages.login.post');
-
+Route::get('/pages/logout',[UserController::class,'logoutForm'])->name('pages.logout');
+});

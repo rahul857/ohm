@@ -14,7 +14,8 @@
               </div>
             </form>
           </div>
-          
+          <a href="{{route('pages.logout')}}" type="button" class="btn btn-danger btn-sm">Logout</button>
+
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
           </button>

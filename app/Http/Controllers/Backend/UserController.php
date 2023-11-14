@@ -28,19 +28,23 @@ class UserController extends Controller
             // $credentials=$request->only('email','password');
             
             // dd($request->all());
-            $data = Auth::guard('web')->attempt($request->only('email', 'password'));
-            dd($data);
+            $data = Auth::attempt($request->only('email', 'password'));
+            // dd($data);
 
-            // if($login)
-            // {   
+            if($data)
+             {   
             //    dd('hello');
-            // return redirect()->route('dashboard');
-            // }
+            return redirect()->route('dashboard');
+             }
 
            return redirect()->back()->withErrors('invalid user email or password');
 
 
 
+    }
+    public function logoutForm(){
+        auth()->logout();
+        return redirect()->route('pages.login');
     }
 
 
