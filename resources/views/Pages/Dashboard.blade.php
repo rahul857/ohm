@@ -4,6 +4,9 @@
 
 @section('container')
 
+
+    
+<div class="container">
 <h3>Deshboard:</h3>
 
 <a type="button" href="{{route('dashboardForm')}}" class="btn btn-success btn-sm">Add Person</a>
@@ -24,11 +27,7 @@
     </tr>
   </thead>
   <tbody>
-    
-
-
-
-
+</div>
 
 
 

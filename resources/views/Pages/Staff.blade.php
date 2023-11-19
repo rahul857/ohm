@@ -15,6 +15,8 @@
       <th scope="col">ID</th>
       <th scope="col">Email</th>
       <th scope="col">Password</th>
+      <th scope="col">Photo</th>
+
     </tr>
   </thead>
   <tbody>

@@ -9,6 +9,10 @@ use App\Http\Controllers\oldageController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +25,14 @@ use App\Http\Controllers\Backend\UserController;
 |
 */
 
+
+Route::get('/master',[FrontendHomeController::class,'master'])->name('master');
+
+
+
+
+
+// backend
 Route::get('/pages/login',[UserController::class,'loginForm'])->name('pages.login');
 
 Route::post('/login-form-post',[UserController::class,'loginPost'])->name('pages.login.post');
@@ -28,6 +40,7 @@ Route::post('/login-form-post',[UserController::class,'loginPost'])->name('pages
 Route::group(['middleware'=>'auth'],function(){
 
 Route::get('/',[MasterController::class,'master'])->name('master');
+
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
 
