@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function master()
     {
-        return view('Frontend.Master');   
+        return view('Frontend.Partials.home');   
     }
 }

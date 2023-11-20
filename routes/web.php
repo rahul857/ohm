@@ -8,11 +8,9 @@ use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
-
-
-
+use App\Http\Controllers\Frontend\UserController as FrontendUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +23,14 @@ use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 |
 */
 
-
+//Frontend
 Route::get('/master',[FrontendHomeController::class,'master'])->name('master');
 
+Route::get('/registration',[FrontendUserController::class,'registration'])->name('User.registration');
+Route::post('/registration',[FrontendUserController::class, 'store'])->name('User.store');
 
+
+Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');
 
 
 
