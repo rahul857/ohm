@@ -31,7 +31,11 @@ Route::post('/registration',[FrontendUserController::class, 'store'])->name('Use
 
 
 Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');
+Route::post('/login',[FrontendUserController::class,'doLogin'])->name('User.do.login');
 
+Route::group(['middleware'=>'auth'],function(){
+Route::get('/logout',[FrontendUserController::class, 'logout'])->name('User.logout');
+});
 
 
 // backend

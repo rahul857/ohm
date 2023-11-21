@@ -47,9 +47,16 @@
                                 <li><a href="about.html" class="nav-link">About</a></li>
                                 <li><a href="contact.html" class="nav-link">Contact</a></li>
 
+
+                                @guest
                                 <li><a href="{{route('User.registration')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Registration</a><span class="icon-linkedin"></span></a></li>
                                 <li><a href="{{route('User.login')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a><span class="icon-linkedin"></span></a></li>
+                                @endguest
 
+                                @auth
+                                <li><a href="{{route('User.logout')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a><span class="icon-linkedin"></span></a></li>
+
+                                @endauth
                             </ul>
                         </nav>
                     </div>
