@@ -60,6 +60,10 @@ Route::post('/admin/store',[adminController::class,'store'])->name('Admin_Data_S
 Route::get('/staff',[staffController::class,'staff'])->name('staff');
 Route::get('/staffForm',[staffController::class,'staffForm'])->name('staffForm');
 Route::post('/staff/store',[staffController::class,'store'])->name('Staff_Data_Store');
+//Doctor
+Route::get('/doctor', [staffController::class,'doctor'])->name('staff.doctor');
+Route::get('/doctorForm',[staffController::class,'doctorForm'])->name('doctorForm');
+Route::post('/doctor/store',[staffController::class,'store'])->name('Doctor_Data_Store');
 
 
 Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');

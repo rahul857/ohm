@@ -4,9 +4,9 @@
 
 @section('container')
 
-<h3 class="pt-5">Staff:</h3>
+<h3>Doctor:</h3>
 
-<a type="button" href="{{route('staffForm')}}" class="btn btn-success btn-sm">Add Person</a>
+<a type="button" href="{{route('doctorForm')}}" class="btn btn-success btn-sm">Add Person</a>
 
 
 <table class="table table-hover">
@@ -20,13 +20,12 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($staffdata as $key=>$item)
     <tr>
-      <th scope="row">{{$key+1}}</th>
-      <td>{{$item->email}}</td>
-      <td>{{$item->password}}</td>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
-    @endforeach
   </tbody>
 </table>
 

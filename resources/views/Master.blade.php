@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  @notifyCss
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +23,10 @@
   <body>
     
      @include('Partials.Header')
+
+
+
+     @include('notify::components.notify')
 
 
 
@@ -64,5 +69,7 @@
     <script src="https://demo.bootstrapdash.com/purple-admin-free/assets/js/dashboard.js"></script>
     <script src="https://demo.bootstrapdash.com/purple-admin-free/assets/js/todolist.js"></script>
     <!-- End custom js for this page -->
+
+    @notifyJs
   </body>
 </html>

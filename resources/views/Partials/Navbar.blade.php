@@ -1,5 +1,5 @@
 <!-- partial -->
-<div class="container-fluid page-body-wrapper">
+<div class="container-fluid page-body-wrapper pt-5">
   <!-- partial:partials/_sidebar.html -->
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav bg-primary">
@@ -36,10 +36,10 @@
         <a type="button" class="nav-link dropdown-toggle" href="{{route('staff')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="menu-titless">Staff</span>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <a class="dropdown-item" href="{{route('staff.doctor')}}">Doctor</a>
+            <a class="dropdown-item" href="#">Cooker</a>
+            <a class="dropdown-item" href="#">Event Orgnizer</a>
+            <a class="dropdown-item" href="#">Helper</a>
           </div>
         </a>
       </li>

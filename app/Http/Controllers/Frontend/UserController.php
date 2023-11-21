@@ -21,6 +21,8 @@ class UserController extends Controller
             'role' => 'customer',
             'password' => bcrypt($request->password),
         ]);
+
+    notify()->success('Customer Registration successful.');
         return redirect()->back();
     }
 
@@ -42,7 +44,7 @@ class UserController extends Controller
 
         if($val->fails())
         {
-           // notify()->error($val->getMessageBag());
+           notify()->error('invalied');
             return redirect()->back();
         }
 
@@ -51,18 +53,18 @@ class UserController extends Controller
 
         if(auth()->attempt($credentials))
         {
-           // notify()->success('Login Success.');
+            notify()->success('Login Success.');
             return redirect()->route('master');
         }
 
-       // notify()->error('Invalid Credentials.');
+        notify()->error('Invalid Credentials.');
             return redirect()->back();
     }
 
     public function logout()
     {
         auth()->logout();
-        //notify()->success('Logout Success.');    
+        notify()->success('Logout Success.');    
         return redirect()->route('master');
     }
 

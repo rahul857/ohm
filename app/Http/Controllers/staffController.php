@@ -24,4 +24,11 @@ class staffController extends Controller
             'password'=>$request->password,
         ]);
     }
+    //Doctor er jonno
+    public function doctor(){
+        return view('Pages.Doctor');
+    }
+    public function doctorForm(){
+        return view('Backend.doctorForm');
+    }
 }

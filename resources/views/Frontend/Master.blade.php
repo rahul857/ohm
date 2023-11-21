@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+@notifyCss
+
     <title>Old Age Home &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,9 +30,11 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
+<x-notify::notify />
 
 @include('Frontend.Partials.Header')
+
+
 
 
 
@@ -83,6 +87,7 @@
     <script src="{{url('/frontend')}}/js/main.js"></script>
 
 
+    @notifyJs
 
 </body>
 
