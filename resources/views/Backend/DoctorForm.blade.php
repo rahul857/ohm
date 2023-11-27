@@ -4,13 +4,28 @@
 
 @section('container')
 
-<h3>Doctor Information:</h3>
+
 
 <hr/>
+<h3>Doctor Information:</h3>
 
 <div class="container">
-<form action="" method="post">
+<form action="{{route('Doctor_Data_Store')}}" method="post" enctype="multipart/form-data">
+
+@if(session()->has('myError'))
+        <p class="alert alert-danger">{{session()->get('myError')}}</p>
+        @endif
+
+        @if(session()->has('message'))
+        <p class="alert alert-success">{{session()->get('message')}}</p>
+        @endif
+
     @csrf
+    <div class="mb-3">
+    <label for="exampleInputName1" class="form-label">Name</label>
+    <input type="name" name="name" class="form-control" id="exampleInputName1">
+  </div>
+
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">

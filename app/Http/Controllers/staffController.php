@@ -18,15 +18,31 @@ class staffController extends Controller
 
     public function store(Request $request){
         //dd($request);
+        $fileName=null;
+        if($request->hasFile('photo'))
+        {
+            $file=$request->file('photo');
+            $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
+
+            $file->storeAs('/uploads',$fileName);
+
+        }
+
+
     
         Staff::create([
-            'email'=>$request->email,
+           'name'=>$request->name,
+           'email'=>$request->email,
             'password'=>$request->password,
-        ]);
+            'image'=>$fileName,
+         ]);
+         return redirect()->back();
+
     }
     //Doctor er jonno
     public function doctor(){
-        return view('Pages.Doctor');
+        $doctors=Staff::all();
+        return view('Pages.Doctor', compact('doctors'));
     }
     public function doctorForm(){
         return view('Backend.doctorForm');

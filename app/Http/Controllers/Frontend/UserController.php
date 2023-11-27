@@ -23,7 +23,7 @@ class UserController extends Controller
         ]);
 
     notify()->success('Customer Registration successful.');
-        return redirect()->back();
+        return redirect()->route('User.login');
     }
 
     //Login Part

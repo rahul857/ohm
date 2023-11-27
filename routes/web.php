@@ -49,6 +49,8 @@ Route::get('/',[MasterController::class,'master'])->name('master');
 
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
+Route::post('/oldage/store',[oldageController::class,'store'])->name('Oldage_Data_Store');
+
 
 Route::get('/', [HomeController::class, 'home'])->name('dashboard');
 

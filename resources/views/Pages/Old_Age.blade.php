@@ -12,13 +12,25 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
       <th scope="col">Photo</th>
     </tr>
   </thead>
   <tbody>
   
+  @foreach($oldages as $key=> $item)
+        <tr>
+            <th scope="row">{{$key+1}}</th>
+            <td>{{$item->name}}</td>
+            <td>{{$item->email}}</td>
+
+            <td> <img style="border-radius: 60px;" width="7%" src="{{url('/uploads//'.$item->image)}}" alt="">
+            </td>
+        </tr>
+
+        @endforeach
+
   </tbody>
 </table>
 
