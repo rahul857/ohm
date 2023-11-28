@@ -29,6 +29,8 @@ Route::get('/master',[FrontendHomeController::class,'master'])->name('master');
 Route::get('/registration',[FrontendUserController::class,'registration'])->name('User.registration');
 Route::post('/registration',[FrontendUserController::class, 'store'])->name('User.store');
 
+//Donation er jonno
+//Route::get('/donation',[donationController::class,'donation'])->name('donation.form');
 
 Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');
 Route::post('/login',[FrontendUserController::class,'doLogin'])->name('User.do.login');
@@ -36,6 +38,11 @@ Route::post('/login',[FrontendUserController::class,'doLogin'])->name('User.do.l
 Route::group(['middleware'=>'auth'],function(){
 Route::get('/logout',[FrontendUserController::class, 'logout'])->name('User.logout');
 });
+
+
+
+
+
 
 
 // backend
@@ -50,7 +57,10 @@ Route::get('/',[MasterController::class,'master'])->name('master');
 Route::get('/oldage',[oldageController::class,'oldage'])->name('Old.Age');
 Route::get('/oldageForm',[oldageController::class,'oldageForm'])->name('oldageForm');
 Route::post('/oldage/store',[oldageController::class,'store'])->name('Oldage_Data_Store');
-
+Route::get('/oldage/view/{id}',[oldageController::class,'view'])->name('oldage.view');
+Route::get('/oldage/edit/{id}',[oldageController::class,'edit'])->name('oldage.edit');
+Route::put('/oldage/update/{id}',[oldageController::class,'update'])->name('oldage.update');
+Route::get('/oldage/update/{id}',[oldageController::class,'delete'])->name('oldage.delete');
 
 Route::get('/', [HomeController::class, 'home'])->name('dashboard');
 

@@ -15,6 +15,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Photo</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,11 @@
 
             <td> <img style="border-radius: 60px;" width="7%" src="{{url('/uploads//'.$item->image)}}" alt="">
             </td>
+            <td>
+        <a href="{{route('oldage.view', $item->id)}}" class="btn btn-primary">View</a>
+        <a href="{{route('oldage.edit', $item->id)}}"class="btn btn-success">Edit</a>
+        <a href="{{route('oldage.delete', $item->id)}}"class="btn btn-danger">Delete</a>
+      </td>
         </tr>
 
         @endforeach

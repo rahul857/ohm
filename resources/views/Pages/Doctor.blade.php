@@ -4,8 +4,8 @@
 
 @section('container')
 
-<h3>Doctor:</h3>
 
+<h3>Doctor:</h3>
 <a type="button" href="{{route('doctorForm')}}" class="btn btn-success btn-sm">Add Person</a>
 
 
