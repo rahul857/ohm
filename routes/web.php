@@ -30,7 +30,11 @@ Route::get('/registration',[FrontendUserController::class,'registration'])->name
 Route::post('/registration',[FrontendUserController::class, 'store'])->name('User.store');
 
 //Donation er jonno
-//Route::get('/donation',[donationController::class,'donation'])->name('donation.form');
+Route::get('/donation/list',[donationController::class,'donationList'])->name('donation.list');
+Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
+Route::post('/donation/store',[donationController::class,'store'])->name('Donation_Data_Store');
+
+
 
 Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');
 Route::post('/login',[FrontendUserController::class,'doLogin'])->name('User.do.login');
@@ -82,7 +86,6 @@ Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboa
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
 Route::get('/donation',[donationController::class,'donation'])->name('donation');
-Route::get('/donationForm',[donationCxontroller::class,'donationForm'])->name('donationForm');
 
 Route::get('/pages/logout',[UserController::class,'logoutForm'])->name('pages.logout');
 });
