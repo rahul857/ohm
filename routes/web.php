@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Frontend\contactController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
 
@@ -26,6 +27,10 @@ use App\Http\Controllers\Frontend\UserController as FrontendUserController;
 //Frontend
 Route::get('/master',[FrontendHomeController::class,'master'])->name('master');
 
+
+Route::get('/search-donation',[FrontendHomeController::class,'search'])->name('donation.search');
+
+
 Route::get('/registration',[FrontendUserController::class,'registration'])->name('User.registration');
 Route::post('/registration',[FrontendUserController::class, 'store'])->name('User.store');
 
@@ -34,6 +39,7 @@ Route::get('/donation/list',[donationController::class,'donationList'])->name('d
 Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
 Route::post('/donation/store',[donationController::class,'store'])->name('Donation_Data_Store');
 
+Route::get('/contact',[contactController::class,'contactlist'])->name('contact.list');
 
 
 Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');

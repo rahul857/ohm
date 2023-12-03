@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-</head>
-<body>
-    
+@extends('Frontend.master')
 
+@section('content')
 
-
-
-
-<h1>helooooo</h1>
-
-<a type="button" href="{{ route('donationForm')}}" class="btn btn-success btn-sm">Add Donation</a>
-
-
+<h1 class="pt-5 mt-5">Donation information</h1>
+<a type="button" href="{{route('donationForm')}}" class="btn btn-success">Add Donation</a>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -30,11 +16,23 @@
         <th scope="col">Transaction ID</th> 
         <th scope="col">Receipt</th> 
         <th scope="col">Action</th>
-      
     </tr>
+    @foreach($data as $key=>$dat )
+    <tr>
+      <th scope="row">{{$key+1}}</th>
+      <td>{{$dat->Name}}</td>
+      <td>{{$dat->Amount}}</td>
+      <td>{{$dat->Payment_Method}}</td>
+      <td>{{$dat->Receiver_Account}}</td>
+      <td>{{$dat->Transaction_ID}}</td>
+      <td>{{$dat->Receipt}}</td>
+      <td>{{$dat->Action}}</td>
+    </tr>
+    @endforeach
+
   </thead>
-  <tbody>
+  </table>
+
+  @endsection
 
 
-</body>
-</html>

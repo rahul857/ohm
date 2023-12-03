@@ -45,7 +45,7 @@
 
                                 <li><a href="{{route('donation.list')}}" class="nav-link">Donate</a></li>
                                 <li><a href="about.html" class="nav-link">About</a></li>
-                                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                                <li><a href="{{route('contact.list')}}" class="nav-link">Contact</a></li>
 
 
                                 @guest
@@ -57,6 +57,18 @@
                                 <li><a href="{{route('User.logout')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a><span class="icon-linkedin"></span></a></li>
 
                                 @endauth
+
+                    
+                    <h5 class="display-5 fw-bolder">Search your product(s)</h5>
+
+                    <form action="{{route('donation.search')}}" method="get">
+                        <input type="text" class="form-control" placeholder="Search..." name="search">
+                        <button type="submit" class="btn btn-success">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </header>
                             </ul>
                         </nav>
                     </div>

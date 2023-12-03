@@ -1,4 +1,4 @@
-@extends ('master')
+<!-- @extends ('master')
 
 
 @section('container')
@@ -29,7 +29,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
+</div> 
 
 
     
@@ -42,4 +42,4 @@
 
 @endsection
 
-
+ -->

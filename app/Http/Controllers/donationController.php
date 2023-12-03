@@ -15,10 +15,11 @@ class donationController extends Controller
 
     //Frontend er:
     public function donationList(){
-       return view('Frontend.Partials.Donation');
+        $data = Donation::all();
+       return view('Frontend.Partials.Donation', compact('data'));
     }
     public function donationForm(){
-        return view('Frontend.Partials.donationForm');
+        return view('Frontend.Partials.DonationForm');
     }
     public function store(Request $request){
 

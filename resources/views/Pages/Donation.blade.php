@@ -6,7 +6,7 @@
 
 <h3>Donation:</h3>
 
-<a type="button" href="{{route('donationForm')}}" class="btn btn-success btn-sm">Add Donation</a>
+<!-- <a type="button" href="{{route('donationForm')}}" class="btn btn-success btn-sm">Add Donation</a> -->
 
 
 <table class="table table-hover">

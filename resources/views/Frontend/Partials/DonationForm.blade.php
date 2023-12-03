@@ -1,7 +1,7 @@
-@extends ('master')
+@extends ('Frontend.master')
 
 
-@section('container')
+@section('content')
 
 <h3>Donation Form:</h3>
 

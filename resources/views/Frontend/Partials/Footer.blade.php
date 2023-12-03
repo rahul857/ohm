@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="footer-heading mb-4">About</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi cumque tenetur inventore veniam, hic vel ipsa necessitatibus ducimus architecto fugiat!</p>
+                        <p>An old age home, also called a retirement home, is a residential facility with nursing and assisted living facilities designed for older adults. They receive the necessary assistance and care, from meals, housekeeping, medical care, and recreational activities to maintain their quality of life.!!</p>
                         <div class="my-5 social">
                             <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                             <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -44,3 +44,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row text-center">
+        <div class="col-md-12">
+          <div class="border-top pt-5">
+            <p class="copyright"><small>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </div>
+    </div> <!-- .site-wrap -->
