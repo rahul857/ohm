@@ -13,6 +13,10 @@ class HomeController extends Controller
         return view('Frontend.Partials.home');   
     }
 
+
+
+    //Search er jonno
+
     public function search(Request $request)
     {
         // dd(request()->all())

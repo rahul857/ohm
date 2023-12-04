@@ -23,13 +23,13 @@
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a href="{{route('master')}}" class="active nav-link">Home</a></li>
                                 <li class="has-children">
-                                    <a href="services.html" class="nav-link">Services</a>
+                                    <a class="nav-link">Services</a>
                                     <ul class="dropdown">
-                                        <li><a href="#" class="nav-link">Amazing Atmosphere</a></li>
-                                        <li><a href="#" class="nav-link">Courteous & Caring Staff</a></li>
-                                        <li><a href="#" class="nav-link">Hospice Care</a></li>
-                                        <li><a href="#" class="nav-link">Quality Medical Care</a></li>
-                                        <li><a href="#" class="nav-link">Excellent Cuisine</a></li>
+                                        <li><a href="#" class="nav-link">Personal care</a></li>
+                                        <li><a href="#" class="nav-link">Meals</a></li>
+                                        <li><a href="#" class="nav-link">Housekeeping</a></li>
+                                        <li><a href="#" class="nav-link">Medical Care</a></li>
+                                        <li><a href="#" class="nav-link">Walking</a></li>
                                         <li class="has-children">
                                             <a href="#">More Links</a>
                                             <ul class="dropdown">
@@ -40,11 +40,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                            <li><a href="{{route('testimonial')}}" class="nav-link">Testimonials</a></li>
 
 
                                 <li><a href="{{route('donation.list')}}" class="nav-link">Donate</a></li>
-                                <li><a href="about.html" class="nav-link">About</a></li>
+                                <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                                 <li><a href="{{route('contact.list')}}" class="nav-link">Contact</a></li>
 
 

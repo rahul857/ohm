@@ -9,7 +9,9 @@ use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\Frontend\aboutController;
 use App\Http\Controllers\Frontend\contactController;
+use App\Http\Controllers\Frontend\testimonialController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
 
@@ -39,7 +41,10 @@ Route::get('/donation/list',[donationController::class,'donationList'])->name('d
 Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
 Route::post('/donation/store',[donationController::class,'store'])->name('Donation_Data_Store');
 
+
+Route::get('/about',[aboutController::class,'about'])->name('about');
 Route::get('/contact',[contactController::class,'contactlist'])->name('contact.list');
+Route::get('/testimonials',[testimonialController::class,'testimonial'])->name('testimonial');
 
 
 Route::get('/login',[FrontendUserController::class,'login'])->name('User.login');

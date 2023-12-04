@@ -42,7 +42,7 @@
 
 
 
-@yield('content')
+        @yield('content')
 
 
 
