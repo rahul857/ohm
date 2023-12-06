@@ -7,10 +7,13 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
+use App\Http\Controllers\trusteeController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\BackendserviceController;
 use App\Http\Controllers\Frontend\aboutController;
 use App\Http\Controllers\Frontend\contactController;
+use App\Http\Controllers\Frontend\serviceController;
 use App\Http\Controllers\Frontend\testimonialController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
@@ -44,6 +47,15 @@ Route::post('/donation/store',[donationController::class,'store'])->name('Donati
 
 Route::get('/about',[aboutController::class,'about'])->name('about');
 Route::get('/contact',[contactController::class,'contactlist'])->name('contact.list');
+
+//Services:
+Route::get('/PersonalCare',[serviceController::class,'PersonalCare'])->name('services.PersonalCare');
+
+Route::get('/meals',[serviceController::class,'meals'])->name('services.meals');
+Route::get('/mealsForm',[serviceController::class,'mealsForm'])->name('meals.Form');
+
+Route::get('/housekeeping',[serviceController::class,'housekeeping'])->name('services.housekeeping');
+
 Route::get('/testimonials',[testimonialController::class,'testimonial'])->name('testimonial');
 
 
@@ -87,6 +99,24 @@ Route::post('/admin/store',[adminController::class,'store'])->name('Admin_Data_S
 Route::get('/staff',[staffController::class,'staff'])->name('staff');
 Route::get('/staffForm',[staffController::class,'staffForm'])->name('staffForm');
 Route::post('/staff/store',[staffController::class,'store'])->name('Staff_Data_Store');
+
+//Service:
+Route::get('/service',[BackendserviceController::class,'services'])->name('services');
+//Route::get('/serviceForm',[BackendserviceController::class,'servicesForm'])->name('services.Form');
+
+Route::get('/PersonalCares',[BackendserviceController::class,'PersonalCares'])->name('PersonalCare.Bend');
+
+
+Route::get('/meal',[BackendserviceController::class,'meal'])->name('meal.Bend');
+Route::get('/mealForm',[BackendserviceController::class,'mealForm'])->name('meal.Form');
+Route::post('/meals/store',[BackendserviceController::class,'store'])->name('Meals_Data_Store');
+
+
+Route::get('/housekeepings',[BackendserviceController::class,'housekeepings'])->name('housekeeping.Bend');
+Route::get('/housekeepingForm',[BackendserviceController::class,'housekeepingForm'])->name('housekeeping.Form');
+Route::post('/housekeeping/store',[BackendserviceController::class,'storehk'])->name('housekeeping_Data_Store');
+
+
 //Doctor
 Route::get('/doctor', [staffController::class,'doctor'])->name('staff.doctor');
 Route::get('/doctorForm',[staffController::class,'doctorForm'])->name('doctorForm');
@@ -97,6 +127,8 @@ Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboa
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
 
 Route::get('/donation',[donationController::class,'donation'])->name('donation');
+
+Route::get('/trustee',[trusteeController::class,'trustee'])->name('trustee.Bend');
 
 Route::get('/pages/logout',[UserController::class,'logoutForm'])->name('pages.logout');
 });

@@ -17,51 +17,27 @@
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-6 text-center mb-5">
-<h2 class="heading-section">Contact Form #07</h2>
+<h2 class="heading-section">Personal Care Fecilities</h2>
 </div>
 </div>
 
 <div class="col-md-6 d-flex align-items-stretch">
 <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
-<h3>Contact information</h3>
-<p class="mb-4">We're open for any suggestion or just to have a call or mail</p>
-<div class="dbox w-100 d-flex align-items-start">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-map-marker"></span>
+<h3>Personal Care</h3>
+
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
 </div>
-<div class="text pl-3">
-<p><span>Address:</span> Kamarpara,Uttara, Dhaka, Bangladesh-1205</p>
-</div>
-</div>
-<div class="dbox w-100 d-flex align-items-center">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-phone"></span>
-</div>
-<div class="text pl-3">
-<p><span>Phone:</span> <a href="tel://1234567920">+8801791774606</a></p>
-</div>
-</div>
-<div class="dbox w-100 d-flex align-items-center">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-paper-plane"></span>
-</div>
-<div class="text pl-3">
-<p><span>Email:</span> <a href="/cdn-cgi/l/email-protection#8ee7e0e8e1cef7e1fbfcfde7faeba0ede1e3"><span class="__cf_email__" data-cfemail="442d2a222b043d2b3136372d30216a272b29">[debnathrahul446@gmail.com]</span></a></p>
-</div>
-</div>
-<div class="dbox w-100 d-flex align-items-center">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-globe"></span>
-</div>
-<div class="text pl-3">
-<p><span>Website</span> <a href="#">http://127.0.0.1:8000/master</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
 </div>
 </div>
 </section>

@@ -25,9 +25,9 @@
                                 <li class="has-children">
                                     <a class="nav-link">Services</a>
                                     <ul class="dropdown">
-                                        <li><a href="#" class="nav-link">Personal care</a></li>
-                                        <li><a href="#" class="nav-link">Meals</a></li>
-                                        <li><a href="#" class="nav-link">Housekeeping</a></li>
+                                        <li><a href="{{route('services.PersonalCare')}}" class="nav-link">Personal care</a></li>
+                                        <li><a href="{{route('services.meals')}}" class="nav-link">Meals</a></li>
+                                        <li><a href="{{route('services.housekeeping')}}" class="nav-link">Housekeeping</a></li>
                                         <li><a href="#" class="nav-link">Medical Care</a></li>
                                         <li><a href="#" class="nav-link">Walking</a></li>
                                         <li class="has-children">

@@ -50,13 +50,33 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/tables/basic-table.html">
-          <span class="menu-title">Donor</span>
+        <!-- <a class="nav-link" href="pages/tables/basic-table.html"> -->
+        <a type="button" class="nav-link dropdown-toggle" href="{{route('services')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="menu-title">Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{route('PersonalCare.Bend')}}">Personal Care</a>
+            <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
+            <a class="dropdown-item" href="{{route('housekeeping.Bend')}}">Housekeeping</a>
+            <a class="dropdown-item" href="#">Medical Care</a>
+            <a class="dropdown-item" href="#">Walking Place</a>
+          </div>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{route('donation')}}">
           <span class="menu-title">Donation</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('trustee.Bend')}}">
+          <span class="menu-title">Trustee</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <span class="menu-title">Visitor</span>
         </a>
       </li>
 
@@ -71,14 +91,7 @@
 
       </a>
       </a>
-      <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-        <span class="menu-title">Trustee</span>
-
-      </a>
-      </a>
-      <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-        <span class="menu-title">Visitor</span>
-
+      
       </a>
       <div class="collapse" id="general-pages">
         <ul class="nav flex-column sub-menu">
