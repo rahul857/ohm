@@ -3,6 +3,12 @@
 
 @section('content')
 
+<div class="col-lg-8">
+<!-- <div class="container mt-3"> -->
+<div class="container mt-5 pt-5">
+<div class="container col-6">
+
+
 <form action="{{route('User.store')}}" class="pt-5" method="post">
   @csrf
 
@@ -23,7 +29,14 @@
   </div>
 
 
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+<!-- </div> -->
+</div>
+</div>
+
+
 
 @endsection
