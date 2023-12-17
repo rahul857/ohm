@@ -26,7 +26,7 @@
                   <label class="form-label" for="typeEmailX-2">Email</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input required name="password" type="text" id="typePasswordX-2" class="form-control form-control-lg" name="password" />
+                  <input required name="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password" />
                   <label class="form-label" for="typePasswordX-2">Password</label>
                 </div>
 

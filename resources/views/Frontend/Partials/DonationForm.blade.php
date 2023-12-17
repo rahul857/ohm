@@ -17,8 +17,8 @@
             <form action="{{route('Donation_Data_Store')}}"method="post">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleInputEmail1"> Name</label>
-                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type your name here">
+                    <label for="exampleInputEmail1"> User_ID</label>
+                    <input type="number" name="user_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type your ID here">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"> Amount</label>

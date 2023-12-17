@@ -15,13 +15,14 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
+            $table->string('User_ID');
             $table->string('Amount')->nullable();
             $table->string('Payment_Method');
             $table->string('Receiver_Account');
-            $table->string('Transaction_ID');
+            $table->string('Transaction_ID')->unique();
             $table->string('Receipt');
             $table->text('Action');
+            $table->string('payment_status')->nullable();
             $table->timestamps();
         });
     }

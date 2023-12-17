@@ -26,13 +26,14 @@ class donationController extends Controller
     public function store(Request $request){
 
        $data= Donation::create([
-            'Name'=>$request->name,
+            'User_ID'=>$request->user_id,
             'Amount'=>$request->amount,
              'Payment_Method'=>$request->payment_method,
              'Receiver_Account'=>$request->receiver_account,
-             'Transaction_ID'=>$request->transaction_id,
+             'Transaction_ID'=>date('YmdHis'),
              'Receipt'=>$request->receipt,
              'Action'=>$request->action,
+             'payment_status'=>'pending'
     
           ]);
 

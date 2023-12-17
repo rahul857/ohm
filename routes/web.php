@@ -15,9 +15,9 @@ use App\Http\Controllers\Frontend\aboutController;
 use App\Http\Controllers\Frontend\contactController;
 use App\Http\Controllers\Frontend\serviceController;
 use App\Http\Controllers\Frontend\testimonialController;
+use App\Http\Controllers\Frontend\SslCommerzPaymentController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
-use App\Http\Controllers\SslCommerzPaymentController;
 
 /*
 |--------------------------------------------------------------------------
