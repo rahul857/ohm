@@ -120,6 +120,7 @@ Route::get('/service',[BackendserviceController::class,'services'])->name('servi
 //Route::get('/serviceForm',[BackendserviceController::class,'servicesForm'])->name('services.Form');
 
 Route::get('/PersonalCares',[BackendserviceController::class,'PersonalCares'])->name('PersonalCare.Bend');
+Route::get('/Transport',[BackendserviceController::class,'Transport'])->name('Transport.Bend');
 
 
 Route::get('/meal',[BackendserviceController::class,'meal'])->name('meal.Bend');

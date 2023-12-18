@@ -25,10 +25,10 @@ class UserController extends Controller
             {
                 return redirect()->back()->withErrors($val);
             }
-            // $credentials=$request->only('email','password');
-            
-            // dd($request->all());
-            $data = Auth::attempt($request->only('email', 'password'));
+            $credentials=$request->only('email','password');
+            //dd($credentials);
+            //dd($request->all());
+            $data = auth()->attempt($credentials);
             // dd($data);
 
             if($data)
@@ -36,6 +36,7 @@ class UserController extends Controller
             //    dd('hello');
             return redirect()->route('dashboard');
              }
+            //  dd('bye');
 
            return redirect()->back()->withErrors('invalid user email or password');
 

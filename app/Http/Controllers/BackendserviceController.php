@@ -18,6 +18,11 @@ class BackendserviceController extends Controller
         return view('pages.PersonalCares');
     }
 
+    //Transport:
+    public function Transport(){
+        return view('pages.Transport');
+    }
+
 
     public function meal(){
         $meals=Meal::all();

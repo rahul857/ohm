@@ -24,7 +24,7 @@ class donationController extends Controller
         return view('Frontend.Partials.DonationForm');
     }
     public function store(Request $request){
-
+//dd($request->all());
        $data= Donation::create([
             'User_ID'=>$request->user_id,
             'Amount'=>$request->amount,
@@ -38,21 +38,17 @@ class donationController extends Controller
           ]);
 
           $this->online_pay($data);
-          return redirect()->route('donation.list');
-
-         
-
           return redirect()->back();
 
     }
 
     public function online_pay($payment)
     {
-        // dd($order);
+        // dd($payment);
         $post_data = array();
         $post_data['total_amount'] = $payment->Amount; # You cant not pay less than 10
         $post_data['currency'] = "BDT";
-        $post_data['tran_id'] = uniqid(); // tran_id must be unique
+        $post_data['tran_id'] = $payment->Transaction_ID ; // tran_id must be unique
 
         # CUSTOMER INFORMATION
         $post_data['cus_name'] = 'Customer Name';

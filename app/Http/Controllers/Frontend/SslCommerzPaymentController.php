@@ -163,7 +163,7 @@ class SslCommerzPaymentController extends Controller
 
     public function success(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         // echo "Transaction is Successful";
 
         $tran_id = $request->input('tran_id');
@@ -176,25 +176,25 @@ class SslCommerzPaymentController extends Controller
             $validation = $sslc->orderValidate($request->all(), $tran_id, $amount, $currency);
 
             if ($validation) {
+                // dd('hi');
                 /*
                 That means IPN did not work or IPN URL was not set in your merchant panel. Here you need to update order status
                 in order table as Processing or Complete.
                 Here you can also sent sms or email for successfull transaction to customer
                 */
-
-
-//donation table er data felte hobe
-
-            $data = Donation::create([
-            
-                
-            ]);
-                
-
+                // dd($tran_id);
+                $data = Donation::where('Transaction_ID', $tran_id)->first();
+                // dd($data);
+                $data->update([
+                    'payment_status' => 'confirm',
+                ]);
 
                 notify()->success('Payment success.');
                return redirect()->back();
-            }else {
+            }
+            
+            else {
+                // dd('bye');
             #That means something wrong happened. You can redirect customer to your product page.
             notify()->error('Payment failed.');
                return redirect()->back();

@@ -13,7 +13,7 @@
   <thead>
     <tr>
       <th scope="col">SL</th>
-      <th scope="col">Name</th>
+      <th scope="col">User_ID</th>
       <th scope="col">Amount</th>
         <th scope="col">Payment Method</th> 
         <th scope="col">Receiver Account</th> 
@@ -27,7 +27,7 @@
   @foreach($data as $key=>$item)
     <tr>
       <th scope="row">{{$key+1}}</th>
-      <td>{{$item->Name}}</td>
+      <td>{{$item->User_ID}}</td>
       <td>{{$item->Amount}}</td>
       <td>{{$item->Payment_Method}}</td>
       <td>{{$item->Receiver_Account}}</td>

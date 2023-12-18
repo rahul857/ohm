@@ -27,10 +27,8 @@
                 <div class="form-group">
                 <label for="exampleInputEmail1">Payment_Method</label>
                 <select name="payment_method" id="" class="form-control" required>
-                    <option value="Bkash">Bank</option>
-                    <option value="Rocket">Bkash</option>
-                    <option value="Rocket">Nagad</option>
-                    <option value="Rocket">Rocket</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Online">Online</option>
                  </select>
             </div>
                 <div class="form-group">

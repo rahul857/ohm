@@ -58,7 +58,7 @@
             <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
             <a class="dropdown-item" href="{{route('housekeeping.Bend')}}">Housekeeping</a>
             <a class="dropdown-item" href="#">Medical Care</a>
-            <a class="dropdown-item" href="#">Walking Place</a>
+            <a class="dropdown-item" href="{{route('Transport.Bend')}}">Transport</a>
           </div>
         </a>
       </li>
