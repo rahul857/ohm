@@ -41,7 +41,7 @@ class staffController extends Controller
     }
     //Doctor er jonno
     public function doctor(){
-        $doctors=Staff::all();
+        $doctors=Staff::paginate(3);
         return view('Pages.Doctor', compact('doctors'));
     }
     public function doctorForm(){

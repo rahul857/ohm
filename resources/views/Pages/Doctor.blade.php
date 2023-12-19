@@ -39,5 +39,5 @@
 
 
 
-
+{{ $doctors->links() }}
 @endsection

@@ -7,6 +7,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\trusteeController;
 use App\Http\Controllers\donationController;
 use App\Http\Controllers\dashboardController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\Frontend\testimonialController;
 use App\Http\Controllers\Frontend\SslCommerzPaymentController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +143,14 @@ Route::post('/doctor/store',[staffController::class,'store'])->name('Doctor_Data
 
 Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');
+
+//Expense:
+Route::get('/expense',[ExpenseController::class,'expense'])->name('expense');
+Route::get('/expenseForm',[ExpenseController::class,'expenseForm'])->name('expenseForm');
+
+//Report:
+Route::get('/donation/report',[ReportController::class,'donationReport'])->name('donation.Report');
+
 
 Route::get('/donation',[donationController::class,'donation'])->name('donation');
 

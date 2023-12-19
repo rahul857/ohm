@@ -41,7 +41,7 @@
      <div class="container">
 
 
-        @yield('container');
+        @yield('container')
 
 
      </div>
@@ -49,6 +49,9 @@
 
 
 
+
+     <!-- {{-- this script for report generate --}} -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 
 
@@ -71,5 +74,9 @@
     <!-- End custom js for this page -->
 
     @notifyJs
+
+    <!-- {{-- @stack('yourJsCode') is for report generate --}} -->
+    @stack('yourJsCode')
+
   </body>
 </html>

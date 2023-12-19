@@ -75,10 +75,40 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" href="{{route('expense')}}">
+          <span class="menu-title">Expense</span>
+        </a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#">
+          <span class="menu-title">Invoice</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" href="#">
           <span class="menu-title">Visitor</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="pages/tables/basic-table.html"> -->
+        <a type="button" class="nav-link dropdown-toggle" href="{{route('services')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="menu-title">Report</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{route('donation.Report')}}">Donation Report</a>
+            <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
+            <a class="dropdown-item" href="{{route('housekeeping.Bend')}}">Housekeeping</a>
+            <a class="dropdown-item" href="#">Medical Care</a>
+            <a class="dropdown-item" href="{{route('Transport.Bend')}}">Transport</a>
+          </div>
+        </a>
+      </li>
+      
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="{{route('donation.Report')}}">
+          <span class="menu-title">Report</span>
+        </a>
+      </li> -->
 
       <li class="nav-item">
         <a href="{{route('pages.logout')}}" class="nav-link">
