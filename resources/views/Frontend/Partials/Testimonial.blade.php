@@ -328,7 +328,7 @@ body {
                             <div class="card border-0 card-0">
                                 <div class="card profile py-3 px-4">
                                     <div class="text-center">
-                                        <img src="https://i.imgur.com/gazoShk.jpg" class="img-fluid profile-pic">
+                                        <img src="https://billionheartsbeating.com/wp-content/uploads/2022/05/OLD-AGE-WELFARE-CENTRE-SCH-Testimonial-Telangana-Region-copy.jpg" class="img-fluid profile-pic">
                                     </div>
                                     <h6 class="mb-0 mt-2">Marielle Haag</h6>
                                     <small>Backend Developer</small>
@@ -342,7 +342,7 @@ body {
                             <div class="card border-0 card-0">
                                 <div class="card profile py-3 px-4">
                                     <div class="text-center">
-                                        <img src="https://i.imgur.com/oW8Wpwi.jpg" class="img-fluid profile-pic">
+                                        <img src="https://billionheartsbeating.com/wp-content/uploads/2022/05/FATIMA-OLD-AGE-HOME-SCH-Testimonial-Telangana-Region-copy-1.jpg" class="img-fluid profile-pic">
                                     </div>
                                     <h6 class="mb-0 mt-2">Ximena Vegara</h6>
                                     <small>UI/UX Designer</small>
@@ -356,7 +356,7 @@ body {
                             <div class="card border-0 card-0">
                                 <div class="card profile py-3 px-4">
                                     <div class="text-center">
-                                        <img src="https://i.imgur.com/ndQx2Rg.jpg" class="img-fluid profile-pic">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Government_Seal_of_Bangladesh.svg/1200px-Government_Seal_of_Bangladesh.svg.png" class="img-fluid profile-pic">
                                     </div>
                                     <h6 class="mb-0 mt-2">John Paul</h6>
                                     <small>UI/UX Designer</small>

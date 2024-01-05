@@ -4,12 +4,12 @@
 
 @section('container')
 
-<h3>Housekeeping Information:</h3>
+<h3>Room(Seat) Information:</h3>
 
 <hr/>
 
 <div class="container">
-<form action="{{route('housekeeping_Data_Store')}}" method='post'>
+<form action="{{route('room_Data_Store')}}" method='post'>
     @csrf
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -18,18 +18,23 @@
   </div>
   <!-- <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">User_ID</label>
-    <input type="user_id" name="user_id" class="form-control" id="exampleInputday1">
+    <input type="number" name="user_id" class="form-control" id="exampleInputday1">
   </div> -->
-  
-  <div class="form-group">
-   <label for="exampleInputEmail1"> User_ID</label>
-   <input type="number" name="user_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type your ID here">
-  </div>
 
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Mobile_No</label>
-    <input type="mobile no." name="mobile_no" class="form-control" id="exampleInputday1">
-  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">User_ID</label>
+    <input type="number" name="user_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type your ID here">
+    </div>
+
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Room_No</label>
+    <input type="number." name="room_no" class="form-control" id="exampleInputday1">
+  </div> -->
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Room_No</label>
+    <input type="number" name="room_no" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Room no here">
+ </div>
 
   <!-- <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Gender</label>
@@ -40,6 +45,15 @@
     </select>
 
   </div> -->
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Seat_No</label>
+    <input type="text" name="seat_no" class="form-control" id="exampleInputday1">
+  </div> -->
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Seat_No</label>
+    <input type="text" name="seat_no" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type seat_no here">
+ </div>
 
   <div class="form-group">
                 <label for="exampleInputEmail1">Gender</label>
@@ -51,10 +65,6 @@
                  </select>
             </div>
 
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Work_Time</label>
-    <input type="work time" name="work_time" class="form-control" id="exampleInputday1">
-  </div>
   
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

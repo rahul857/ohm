@@ -22,6 +22,7 @@
 
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a href="{{route('master')}}" class="active nav-link">Home</a></li>
+                                <li><a href="{{route('admit.form')}}" class="active nav-link">Admit Form</a></li>
                                 <li class="has-children">
                                     <a class="nav-link">Services</a>
                                     <ul class="dropdown">
@@ -29,7 +30,7 @@
                                         <li><a href="{{route('services.meals')}}" class="nav-link">Meals</a></li>
                                         <li><a href="{{route('services.housekeeping')}}" class="nav-link">Housekeeping</a></li>
                                         <li><a href="#" class="nav-link">Medical Care</a></li>
-                                        <li><a href="#" class="nav-link">Walking</a></li>
+                                        <!-- <li><a href="#" class="nav-link">Walking</a></li> -->
                                         <li class="has-children">
                                             <a href="#">More Links</a>
                                             <ul class="dropdown">
@@ -59,12 +60,12 @@
                                 @endauth
 
                     
-                    <h5 class="display-5 fw-bolder">Search your product(s)</h5>
+                    <!-- <h5 class="display-5 fw-bolder">Search your product(s)</h5>
 
                     <form action="{{route('donation.search')}}" method="get">
                         <input type="text" class="form-control" placeholder="Search..." name="search">
                         <button type="submit" class="btn btn-success">Search</button>
-                    </form>
+                    </form> -->
 
                 </div>
             </div>

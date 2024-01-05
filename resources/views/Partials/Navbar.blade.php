@@ -11,13 +11,14 @@
       <li class="nav-item">
         <a class="nav-link" href="{{route('dashboard')}}">
           <span class="menu-title">Dashboard</span>
-
+      <i class="mdi mdi-home menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{route('Old.Age')}}">
           <span class="menu-title">Old Person</span>
-
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-apps menu-icon"></i>
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
@@ -29,7 +30,8 @@
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin')}}">
           <span class="menu-title">Admin</span>
-
+          <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
@@ -38,17 +40,17 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('staff.doctor')}}">Doctor</a>
             <a class="dropdown-item" href="#">Cooker</a>
-            <a class="dropdown-item" href="#">Event Orgnizer</a>
-            <a class="dropdown-item" href="#">Helper</a>
+            <!-- <a class="dropdown-item" href="#">Event Orgnizer</a> -->
+            <!-- <a class="dropdown-item" href="#">Helper</a> -->
           </div>
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="pages/charts/chartjs.html">
           <span class="menu-title">Manager</span>
 
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <!-- <a class="nav-link" href="pages/tables/basic-table.html"> -->
         <a type="button" class="nav-link dropdown-toggle" href="{{route('services')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,6 +71,27 @@
       </li>
 
       <li class="nav-item">
+
+
+      <!-- <li class="nav-item"> -->
+        <!-- <a class="nav-link" href="pages/tables/basic-table.html"> -->
+        <a type="button" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="menu-title">Admit Info.</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{route('seat.room')}}">Room(Bed)Booking</a>
+            <a class="dropdown-item" href="{{route('admit.Recordfille')}}">Record File</a>
+          </div>
+        </a>
+      </li>
+
+
+
+        <!-- <a class="nav-link" href="{{route('seat.room')}}">
+          <span class="menu-title">Room(seat)</span>
+        </a>
+      </li> -->
+
+      <li class="nav-item">
         <a class="nav-link" href="{{route('trustee.Bend')}}">
           <span class="menu-title">Trustee</span>
         </a>
@@ -78,11 +101,12 @@
         <a class="nav-link" href="{{route('expense')}}">
           <span class="menu-title">Expense</span>
         </a>
-      </li><li class="nav-item">
+      </li>
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">
           <span class="menu-title">Invoice</span>
         </a>
-      </li>
+      </li> -->
 
       <li class="nav-item">
         <a class="nav-link" href="#">
@@ -96,10 +120,10 @@
           <span class="menu-title">Report</span>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('donation.Report')}}">Donation Report</a>
-            <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
+            <!-- <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
             <a class="dropdown-item" href="{{route('housekeeping.Bend')}}">Housekeeping</a>
             <a class="dropdown-item" href="#">Medical Care</a>
-            <a class="dropdown-item" href="{{route('Transport.Bend')}}">Transport</a>
+            <a class="dropdown-item" href="{{route('Transport.Bend')}}">Transport</a> -->
           </div>
         </a>
       </li>
@@ -116,10 +140,10 @@
         </a>
       </li>
 
-      <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+      <!-- <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
         <span class="menu-title">Invoic</span>
 
-      </a>
+      </a> -->
       </a>
       
       </a>

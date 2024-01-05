@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\oldageController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\trusteeController;
 use App\Http\Controllers\donationController;
@@ -16,10 +18,11 @@ use App\Http\Controllers\Frontend\aboutController;
 use App\Http\Controllers\Frontend\contactController;
 use App\Http\Controllers\Frontend\serviceController;
 use App\Http\Controllers\Frontend\testimonialController;
+use App\Http\Controllers\Frontend\FrontendRoomController;
+use App\Http\Controllers\Frontend\FrontendAdmitformController;
 use App\Http\Controllers\Frontend\SslCommerzPaymentController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\UserController as FrontendUserController;
-use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,22 +45,27 @@ Route::get('/search-donation',[FrontendHomeController::class,'search'])->name('d
 Route::get('/registration',[FrontendUserController::class,'registration'])->name('User.registration');
 Route::post('/registration',[FrontendUserController::class, 'store'])->name('User.store');
 
+//Room(seat):
+Route::get('/frontendroom', [FrontendRoomController::class,'frontendroom'])->name('seat.frontendroom');
+
+
 //Donation er jonno
 Route::get('/donation/list',[donationController::class,'donationList'])->name('donation.list');
 Route::get('/donationForm',[donationController::class,'donationForm'])->name('donationForm');
 Route::post('/donation/store',[donationController::class,'store'])->name('Donation_Data_Store');
 
+//Admit Form:
+Route::get('/admit/form',[FrontendAdmitformController::class,'admitform'])->name('admit.form');
+Route::get('/frontendadmitForm',[FrontendAdmitformController::class,'frontendadmitForm'])->name('frontendadmitForm');
+Route::post('/admit/store',[FrontendAdmitformController::class,'admitstore'])->name('Admit_Data_Store');
+
+
 
 Route::get('/about',[aboutController::class,'about'])->name('about');
 Route::get('/contact',[contactController::class,'contactlist'])->name('contact.list');
 
-//Services:
-Route::get('/PersonalCare',[serviceController::class,'PersonalCare'])->name('services.PersonalCare');
 
-Route::get('/meals',[serviceController::class,'meals'])->name('services.meals');
-Route::get('/mealsForm',[serviceController::class,'mealsForm'])->name('meals.Form');
 
-Route::get('/housekeeping',[serviceController::class,'housekeeping'])->name('services.housekeeping');
 
 Route::get('/testimonials',[testimonialController::class,'testimonial'])->name('testimonial');
 
@@ -67,6 +75,14 @@ Route::post('/login',[FrontendUserController::class,'doLogin'])->name('User.do.l
 
 Route::group(['middleware'=>'auth'],function(){
 Route::get('/logout',[FrontendUserController::class, 'logout'])->name('User.logout');
+
+//Services:
+Route::get('/PersonalCare',[serviceController::class,'PersonalCare'])->name('services.PersonalCare');
+
+Route::get('/meals',[serviceController::class,'meals'])->name('services.meals');
+Route::get('/mealsForm',[serviceController::class,'mealsForm'])->name('meals.Form');
+
+Route::get('/housekeeping',[serviceController::class,'housekeeping'])->name('services.housekeeping');
 
 // SSLCOMMERZ Start
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
@@ -134,12 +150,19 @@ Route::get('/housekeepings',[BackendserviceController::class,'housekeepings'])->
 Route::get('/housekeepingForm',[BackendserviceController::class,'housekeepingForm'])->name('housekeeping.Form');
 Route::post('/housekeeping/store',[BackendserviceController::class,'storehk'])->name('housekeeping_Data_Store');
 
+//Room:
+Route::get('/room', [RoomController::class,'room'])->name('seat.room');
+Route::get('/roomForm',[RoomController::class,'roomForm'])->name('room.Form');
+Route::post('/room/store',[RoomController::class,'storeR'])->name('room_Data_Store');
+
+//Record File:
+Route::get('/admitRecordfille', [FrontendAdmitformController::class,'admitRecordfille'])->name('admit.Recordfille');
+
 
 //Doctor
 Route::get('/doctor', [staffController::class,'doctor'])->name('staff.doctor');
 Route::get('/doctorForm',[staffController::class,'doctorForm'])->name('doctorForm');
 Route::post('/doctor/store',[staffController::class,'store'])->name('Doctor_Data_Store');
-
 
 Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
 Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name('dashboardForm');

@@ -10,7 +10,7 @@
 
     
                       <!-- Donar name-->
-                      <h5 class="fw-bolder">{{$donation->name}}</h5>
+                      <h5 class="fw-bolder">{{$donation->User_ID}}</h5>
 
                 @endforeach
 

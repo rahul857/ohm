@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         if($request->search)
         {
-            $donation=Donation::where('name','LIKE','%'.$request->search.'%')->get();
+            $donation=Donation::where('User_ID','LIKE','%'.$request->search.'%')->get();
             //select * from products where name like % akash %;
         }else{
             $donation=Donation::all();

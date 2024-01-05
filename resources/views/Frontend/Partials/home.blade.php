@@ -8,7 +8,15 @@
                     <div class="col-lg-6 align-self-center">
                         <h1 class="heading mb-3">Give Your Loved Ones Care</h1>
                         <p class="lead text-white mb-5">and Love Through Our Old Age Home</p>
-                        <p><a href="#" class="btn btn-primary">Get In Touch</a></p>
+                        <!-- <p><a href="#" class="btn btn-primary">Get In Touch</a></p> -->
+
+                        <h5 class="display-5 fw-bolder">Search your product(s)</h5>
+
+<form action="{{route('donation.search')}}" method="get">
+    <input type="text" class="form-control" placeholder="Search..." name="search">
+    <button type="submit" class="btn btn-success">Search</button>
+</form>
+
                     </div>
                 </div>
             </div>
@@ -99,10 +107,22 @@
                 <div class="row">
                     <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter-wrap text-center">
-                            <strong class="counter d-block"><span class="number" data-number="100"></span></strong>
+                            <strong class="counter d-block"><span class="number" data-number="20"></span></strong>
                             <span>Rooms Available</span>
+
+                            <li><a href="{{route('seat.frontendroom')}}" class="nav-link"><button type="submit" class="btn btn-success">Admit Information</button><span></span></a></li>
                         </div>
                     </div>
+
+
+
+
+                    <!-- <button type="submit" class="btn btn-success">Search</button> -->
+
+
+
+
+
                     <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter-wrap text-center">
                             <strong class="counter d-block"><span class="number" data-number="10"></span></strong>
