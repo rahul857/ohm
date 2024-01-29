@@ -15,7 +15,6 @@
         <th scope="col">Room_No</th>
         <th scope="col">seat_No</th>
         <th scope="col">Gender</th>
-        <th scope="col">Action</th>
       </tr>
 
     </thead>
@@ -26,16 +25,10 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$room->Name}}</td>
       <td>{{$room->User_ID}}</td>
-      <td>{{$room->Mobile_No}}</td>
+      <td>{{$room->Room_No}}</td>
+      <td>{{$room->seat_No}}</td>
       <td>{{$room->Gender}}</td>
-      <td>{{$room->Work_Time}}</td>
-      <td>{{$room->Action}}</td>
-    
-      <td>
-        <a href="#" class="btn btn-primary">Edit</a>
-        <a href="#"class="btn btn-success">Add</a>
-        <a href="#"class="btn btn-danger">Delete</a>
-      </td>
+     
     </tr>
     @endforeach
   </tbody>

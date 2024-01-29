@@ -27,6 +27,9 @@
           </ul>
         </div>
       </li>
+
+
+
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin')}}">
           <span class="menu-title">Admin</span>
@@ -39,7 +42,7 @@
           <span class="menu-titless">Staff</span>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('staff.doctor')}}">Doctor</a>
-            <a class="dropdown-item" href="#">Cooker</a>
+            <!-- <a class="dropdown-item" href="#">Cooker</a> -->
             <!-- <a class="dropdown-item" href="#">Event Orgnizer</a> -->
             <!-- <a class="dropdown-item" href="#">Helper</a> -->
           </div>
@@ -59,7 +62,7 @@
             <a class="dropdown-item" href="{{route('PersonalCare.Bend')}}">Personal Care</a>
             <a class="dropdown-item" href="{{route('meal.Bend')}}">Meals</a>
             <a class="dropdown-item" href="{{route('housekeeping.Bend')}}">Housekeeping</a>
-            <a class="dropdown-item" href="#">Medical Care</a>
+            <!-- <a class="dropdown-item" href="#">Medical Care</a> -->
             <a class="dropdown-item" href="{{route('Transport.Bend')}}">Transport</a>
           </div>
         </a>
@@ -108,11 +111,11 @@
         </a>
       </li> -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">
           <span class="menu-title">Visitor</span>
         </a>
-      </li>
+      </li> -->
 
       <li class="nav-item">
         <!-- <a class="nav-link" href="pages/tables/basic-table.html"> -->

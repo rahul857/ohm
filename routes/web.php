@@ -170,6 +170,8 @@ Route::get('/dashboardForm',[dashboardController::class,'dashboardForm'])->name(
 //Expense:
 Route::get('/expense',[ExpenseController::class,'expense'])->name('expense');
 Route::get('/expenseForm',[ExpenseController::class,'expenseForm'])->name('expenseForm');
+Route::post('/expense/store',[ExpenseController::class,'expenestore'])->name('Expense_Data_Store');
+
 
 //Report:
 Route::get('/donation/report',[ReportController::class,'donationReport'])->name('donation.Report');

@@ -4,7 +4,7 @@
 
 <div class="container mt-5 pt-5">
 
-  <h1 class="pt-5 mt-5">Meals information(weekly)</h1>
+  <h1 class="pt-5 mt-5">Meals information</h1>
   <!-- <a type="button" href="{{route('meals.Form')}}" class="btn btn-success">Add Meals</a> -->
   <table class="table table-hover">
     <thead>

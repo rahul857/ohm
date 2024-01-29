@@ -26,9 +26,9 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$room->Name}}</td>
       <td>{{$room->User_ID}}</td>
-      <td>{{$room->Mobile_No}}</td>
+      <td>{{$room->Room_No}}</td>
+      <td>{{$room->seat_No}}</td>
       <td>{{$room->Gender}}</td>
-      <td>{{$room->Work_Time}}</td>
       <!-- <td>{{$room->Action}}</td> -->
     
       

@@ -9,7 +9,7 @@
 <hr/>
 
 <div class="container">
-<form action="{{route('Staff_Data_Store')}}" method="post">
+<form action="{{route('Expense_Data_Store')}}" method="post">
     @csrf
   <div class="form-group">
     <label for="exampleInputEmail1"> User_ID</label>

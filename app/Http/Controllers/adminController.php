@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Validator;
 
 class adminController extends Controller
 {
+
+
     public function admin(){
         $admindata=Admin::paginate(2);
         return view('pages.Admin',compact('admindata'));

@@ -15,7 +15,6 @@
         <th scope="col">Mobile_No</th>
         <th scope="col">Gender</th>
         <th scope="col">Work_Time</th>
-        <th scope="col">Action</th>
       </tr>
 
     </thead>
@@ -29,13 +28,7 @@
       <td>{{$housekeeping->Mobile_No}}</td>
       <td>{{$housekeeping->Gender}}</td>
       <td>{{$housekeeping->Work_Time}}</td>
-      <td>{{$housekeeping->Action}}</td>
-    
-      <td>
-        <a href="#" class="btn btn-primary">Edit</a>
-        <a href="#"class="btn btn-success">Add</a>
-        <a href="#"class="btn btn-danger">Delete</a>
-      </td>
+      
     </tr>
     @endforeach
   </tbody>

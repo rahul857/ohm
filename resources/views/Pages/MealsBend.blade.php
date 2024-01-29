@@ -15,7 +15,6 @@
         <th scope="col">Morning</th>
         <th scope="col">Noon</th>
         <th scope="col">Night</th>
-        <th scope="col">Action</th>
       </tr>
 
     </thead>
@@ -29,13 +28,7 @@
       <td>{{$meal->Morning}}</td>
       <td>{{$meal->Noon}}</td>
       <td>{{$meal->Night}}</td>
-      <td>{{$meal->Action}}</td>
-    
-      <td>
-        <a href="#" class="btn btn-primary">Edit</a>
-        <a href="#"class="btn btn-success">Add</a>
-        <a href="#"class="btn btn-danger">Delete</a>
-      </td>
+      
     </tr>
     @endforeach
   </tbody>

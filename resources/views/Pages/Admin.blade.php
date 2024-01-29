@@ -19,6 +19,8 @@
       <th scope="col">Present Address</th>
       <th scope="col">Permanent Address</th>
       <th scope="col">City</th>
+      <th scope="col">Country</th>
+
       <th scope="col">State</th>
       <th scope="col">Zip</th>
       <th scope="col">Action</th>

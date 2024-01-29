@@ -61,6 +61,7 @@
     <label for="exampleInputPhoto" class="form-label">Photo</label>
     <input type="file" name="photo" class="form-control" id="exampleInputPhoto">
   </div>
+  
 
 <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
 

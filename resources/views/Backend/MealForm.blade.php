@@ -44,7 +44,6 @@
 
 
     
-<h3>Doctor Information:</h3>
 
 
 

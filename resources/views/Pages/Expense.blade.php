@@ -9,7 +9,8 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">ID</th>
+      <th scope="col">SL</th>
+        <th scope="col">User_ID</th>
         <th scope="col">Title</th>
         <th scope="col">Category_ID</th>
         <th scope="col">Expense_by</th>
@@ -21,7 +22,19 @@
     </thead>
 
     <tbody>
-
+    @foreach($expenses  as $key=>$expense)
+    <tr>
+      <th scope="row">{{$key+1}}</th>
+      <td>{{$expense->User_ID}}</td>
+      <td>{{$expense->Title}}</td>
+      <td>{{$expense->Category_ID}}</td>
+      <td>{{$expense->Expense_by}}</td>
+      <td>{{$expense->Description}}</td>
+      <td>{{$expense->Amount}}</td>
+      <td>{{$expense->Date}}</td>    
+    </tr>
+    @endforeach
+    </tbody>
     </table>
 
 </div>
